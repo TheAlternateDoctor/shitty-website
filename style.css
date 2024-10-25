@@ -1,0 +1,20 @@
+.about, h2{
+    text-align: center;
+}
+
+.list-container{
+    text-align:center;
+}
+
+ul.main-list{
+    text-align:left;
+    display: inline-block;
+}
+
+table{
+    width:100%;
+}
+
+.sidebar{
+    border-right: 3px solid cyan;
+}
