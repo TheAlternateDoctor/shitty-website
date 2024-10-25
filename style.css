@@ -16,5 +16,28 @@ table{
 }
 
 .sidebar{
-    border-right: 3px solid cyan;
+    width:15%;
+    vertical-align: top;
+    padding:1%;
+}
+
+.img-index {
+    width:33%;
+    text-align:center;
+}
+
+.img-nav {
+    width:100%;
+}
+
+.navbar, .top {
+    text-align: center;
+}
+
+.main {
+    border-left: 3px solid cyan;
+}
+
+.table{
+    border-top: 3px solid cyan;
 }
