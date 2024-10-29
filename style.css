@@ -22,8 +22,12 @@ table{
 }
 
 .img-index {
-    width:33%;
+    width:20%;
     text-align:center;
+}
+
+.img-project {
+    width:20%;
 }
 
 .img-nav {
