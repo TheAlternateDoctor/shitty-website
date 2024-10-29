@@ -34,7 +34,11 @@ table{
     width:100%;
 }
 
-.navbar, .top {
+.blinky-footer{
+    width:11%;
+}
+
+.navbar, .top, .footer {
     text-align: center;
 }
 
@@ -44,4 +48,19 @@ table{
 
 .table{
     border-top: 3px solid cyan;
+    padding-bottom:5%;
+}
+
+.sticky-socials{
+    background-color: cyan;
+    padding-top:0.5%;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:100;
+}
+
+.title-footer{
+    margin:0
 }
