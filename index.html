@@ -2,11 +2,17 @@
 <head>
     <title>Doc's website</title>
     <link href="style.css" rel="stylesheet">
-    <script src="includes/jquery.js"></script>
     <script>
-        $(function(){
-            $('#sidebar').load("includes/sidebar.html");
-            $('#top').load("includes/top.html");
+        fetch("includes/sidebar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("sidebar").innerHTML = data;
+        });
+
+        fetch("includes/top.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("top").innerHTML = data;
         });
     </script>
 </head>
