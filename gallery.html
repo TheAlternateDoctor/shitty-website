@@ -1,0 +1,50 @@
+<HTML>
+    <head>
+        <title>Doc's website</title>
+        <link href="/style.css" rel="stylesheet">
+        <script type="text/javascript" src="gallery.js"></script>
+        <script>
+            fetch("includes/sidebar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("sidebar").innerHTML = data;
+            });
+    
+            fetch("includes/top.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("top").innerHTML = data;
+            });
+    
+            fetch("includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+        </script>
+    </head>
+    <body onload="fillPics()">
+        <div class="top" id="top"></div>
+        <table class="table">
+            <td class="sidebar">
+                <div id="sidebar"></div>
+            </td>
+            <td class="main gallery">
+                <table class="gallery">
+                    <td class="gallery-center">
+                        <div id="gallery"></div>
+                    </td>
+                    <td class="gallery-tags center-text">
+                        <h2>TAGS</h2>
+                        <p>Drawn by:</p>
+                        <button type="button" value="me">Me</button>
+                        <button type="button" value="others">Others</button>
+                    </td> 
+                </table>
+            </td>
+            <div class="sticky-socials footer" id="footer"></div>
+    </table>
+    
+
+    </body>
+    </HTML>

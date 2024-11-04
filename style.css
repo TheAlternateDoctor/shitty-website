@@ -1,4 +1,4 @@
-.about, h2{
+.about, h2, .center-text{
     text-align: center;
 }
 
@@ -63,4 +63,55 @@ table{
 
 .title-footer{
     margin:0
+}
+
+.oc-column{
+    width:33%
+}
+
+.oc-references-form{
+    height:0;
+    margin-bottom: 0;
+}
+
+.oc-references-button{
+    padding-bottom: 2px;
+}
+
+.oc-references-divider{
+    margin: 3px 0px;
+    border-bottom: 3px dashed blue;
+}
+
+.oc-sidebar-list{
+    margin-top: 0%;
+}
+
+.oc-sidebar-title{
+    margin-bottom: 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.gallery{
+    height:100%
+}
+
+.gallery-tags{
+    height:100%;
+    width:33%;
+    border-left:3px solid cyan
+}
+
+.gallery-pic{
+    margin:.5%
+}
+
+.gallery-pic-container{
+    height:15%;
 }
