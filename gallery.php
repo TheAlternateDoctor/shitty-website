@@ -25,21 +25,19 @@ if(isset($tags)){
     $result = $mysqli->query("SELECT * FROM tags");
     foreach($result->fetch_all() as $row){
         if(in_array($row[1], $tags)){
-            $tagIds .= $row[0].",";
+            $tagIds .= "$row[0],";
         }
     }
 
     $tagIds = substr($tagIds, 0, -1);
 
-    $query .= " INNER JOIN img_tag_link ON img.id = img_tag_link.img_id WHERE img_tag_link.tag_id in (".$tagIds.")";
+    $query .= " INNER JOIN img_tag_link ON img.id = img_tag_link.img_id WHERE img_tag_link.tag_id in ($tagIds)";
 
 }
 
 $result = $mysqli->query($query);
 $images = array();
 foreach($result->fetch_all() as $row){
-    array_push($images, array("src"=>$row[1], "height"=>$row[3], "width"=> $row[2]));
+    array_push($images, array("id"=>$row[0], "src"=>$row[1], "height"=>$row[3], "width"=> $row[2]));
 }
 echo json_encode($images);
-
-?>

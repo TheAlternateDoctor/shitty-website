@@ -105,7 +105,13 @@ table{
 .gallery-tags{
     height:100%;
     width:33%;
-    border-left:3px solid cyan
+    border-left:3px solid cyan;
+    vertical-align: top;
+}
+
+.tags-gallery{
+    position:sticky;
+    top:0;
 }
 
 .gallery-pic{
@@ -114,4 +120,11 @@ table{
 
 .gallery-pic-container{
     height:15%;
+}
+
+.gallery-center-content {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

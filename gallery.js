@@ -19,10 +19,15 @@ function fillPics() {
         html = ""
         gallery = document.getElementById("gallery")
         totalHeight = window.innerHeight
-        maxHeight = totalHeight * 0.15
+        totalWidth = window.innerWidth
+        if(totalHeight<totalWidth){
+            maxHeight = totalHeight * 0.15
+        } else {
+            maxHeight = totalWidth * 0.15
+        }
         pics.forEach(pic => {
             width = pic.width * (maxHeight/pic.height)
-            html += "<img src='" + pic.src + "' class='gallery-pic' height='"+maxHeight+"' width='"+width+"'/>"
+            html += "<a href='image.php?id=" + pic.id + "'><img src='" + pic.src + "' class='gallery-pic' height='"+maxHeight+"' width='"+width+"'/></a>"
         });
     
         gallery.innerHTML = html
