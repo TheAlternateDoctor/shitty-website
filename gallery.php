@@ -5,6 +5,11 @@
 // location
 // width
 // height
+if(isset($_GET["tags"])){
+    $tags = explode(",",$_GET["tags"]);
+}
+
+// select * from img 
 
 $dbHost="localhost";
 $dbUser="website";
@@ -13,7 +18,24 @@ $dbName="gallery";
 
 $mysqli = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 
-$result = $mysqli->query("SELECT * FROM img");
+$query = "SELECT * FROM img";
+
+if(isset($tags)){
+    $tagIds = "";
+    $result = $mysqli->query("SELECT * FROM tags");
+    foreach($result->fetch_all() as $row){
+        if(in_array($row[1], $tags)){
+            $tagIds .= $row[0].",";
+        }
+    }
+
+    $tagIds = substr($tagIds, 0, -1);
+
+    $query .= " INNER JOIN img_tag_link ON img.id = img_tag_link.img_id WHERE img_tag_link.tag_id in (".$tagIds.")";
+
+}
+
+$result = $mysqli->query($query);
 $images = array();
 foreach($result->fetch_all() as $row){
     array_push($images, array("src"=>$row[1], "height"=>$row[3], "width"=> $row[2]));
