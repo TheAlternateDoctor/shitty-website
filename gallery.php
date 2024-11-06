@@ -1,15 +1,11 @@
 <?php
 
-// img TABLE DB STRUCTURE:
-// id
-// location
-// width
-// height
-if(isset($_GET["tags"])){
-    $tags = explode(",",$_GET["tags"]);
-}
+error_reporting(E_ALL);
 
-// select * from img 
+if(isset($_GET["tags"])){
+    $tags = substr($_GET["tags"], 0, -1);
+    $tags = explode(",",$tags);
+}
 
 $dbHost="localhost";
 $dbUser="website";
@@ -18,26 +14,76 @@ $dbName="gallery";
 
 $mysqli = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 
-$query = "SELECT * FROM img";
 
 if(isset($tags)){
-    $tagIds = "";
+    $query = "SELECT DISTINCT img.id, img.location, img.width, img.height FROM img";
+
+    //First we get the images with either tags
+    $tagIdsString = "";
+    $tagIds = array();
     $result = $mysqli->query("SELECT * FROM tags");
     foreach($result->fetch_all() as $row){
         if(in_array($row[1], $tags)){
-            $tagIds .= "$row[0],";
+            array_push($tagIds, $row[0]);
+            $tagIdsString .= "$row[0],";
         }
     }
 
-    $tagIds = substr($tagIds, 0, -1);
+    $tagIdsString = substr($tagIdsString, 0, -1);
 
-    $query .= " INNER JOIN img_tag_link ON img.id = img_tag_link.img_id WHERE img_tag_link.tag_id in ($tagIds)";
+    $query .= " INNER JOIN img_tag_link ON img.id = img_tag_link.img_id WHERE img_tag_link.tag_id in ($tagIdsString)";
 
+    $result = $mysqli->query($query);
+    $images = array();
+    $images_id = array();
+    foreach($result->fetch_all() as $row){
+        $images[$row[0]] = array(
+            "id"=>$row[0], 
+            "src"=>$row[1], 
+            "height"=>$row[3], 
+            "width"=> $row[2],
+            "tags"=> array());
+    }
+    
+    //Then we get the linktable entries for the same images
+
+    $query = "SELECT img_tag_link.img_id, img_tag_link.tag_id FROM img_tag_link";
+
+    $query .= " INNER JOIN img ON img.id = img_tag_link.img_id WHERE img_tag_link.tag_id in ($tagIdsString)";
+
+    $result = $mysqli->query($query);
+    foreach($result->fetch_all() as $row){
+        array_push($images[$row[0]]["tags"],$row[1]);
+    }
+
+    //Finally we rearrange the array for JS, only adding the entries with both tags
+    $new_images = array();
+
+    foreach($images as $image){
+        if(!array_diff($tagIds, $image['tags'])){
+            array_push($new_images, array(
+                "id"=>$image['id'], 
+                "src"=>$image['src'], 
+                "height"=>$image['height'], 
+                "width"=> $image['width']));
+        }
+    }
+
+    echo json_encode($new_images);
+
+} else {
+    $query = "SELECT * FROM img";
+
+    $result = $mysqli->query($query);
+    $images = array();
+    $images_id = array();
+    foreach($result->fetch_all() as $row){
+        array_push($images, array(
+            "id"=>$row[0], 
+            "src"=>$row[1], 
+            "height"=>$row[3], 
+            "width"=> $row[2]));
+    }
+    
+    echo json_encode($images);
 }
-
-$result = $mysqli->query($query);
-$images = array();
-foreach($result->fetch_all() as $row){
-    array_push($images, array("id"=>$row[0], "src"=>$row[1], "height"=>$row[3], "width"=> $row[2]));
-}
-echo json_encode($images);
