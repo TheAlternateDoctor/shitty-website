@@ -38,6 +38,7 @@ function addTag(tag){
     selectedTags.push(tag)
     document.getElementById(tag).setAttribute("onclick", "removeTag('"+tag+"')")
     document.getElementById(tag).classList.add("tag-button-pressed")
+    scroll(0,0)
     fillPics();
 }
 
@@ -46,5 +47,6 @@ function removeTag(tag){
     selectedTags.splice(index, 1);
     document.getElementById(tag).setAttribute("onclick", "addTag('"+tag+"')")
     document.getElementById(tag).classList.remove("tag-button-pressed")
+    scroll(0,0)
     fillPics();
 }

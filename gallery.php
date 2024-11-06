@@ -1,19 +1,11 @@
 <?php
 
-error_reporting(E_ALL);
-
 if(isset($_GET["tags"])){
     $tags = substr($_GET["tags"], 0, -1);
     $tags = explode(",",$tags);
 }
 
-$dbHost="localhost";
-$dbUser="website";
-$dbPass="website";
-$dbName="gallery";
-
-$mysqli = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
-
+include_once("db.php");
 
 if(isset($tags)){
     $query = "SELECT DISTINCT img.id, img.location, img.width, img.height FROM img";

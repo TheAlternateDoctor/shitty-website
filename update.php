@@ -1,14 +1,6 @@
 <?php
 
-$id=$_GET['id'];
-$tag=$_GET['tag'];
-
-$dbHost="localhost";
-$dbUser="website";
-$dbPass="website";
-$dbName="gallery";
-
-$mysqli = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
+include_once("db.php");
 
 $result = $mysqli->query("SELECT * FROM tags WHERE name LIKE '$tag'")->fetch_row();
 
