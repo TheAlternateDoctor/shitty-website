@@ -1,4 +1,4 @@
-selectedTags = []
+selectedTags = Array()
 
 function fillPics() {
     //Results of like, a query or smth
@@ -6,7 +6,7 @@ function fillPics() {
     if(selectedTags.length > 0){
         tagList = ""
         selectedTags.forEach(element => {
-            tagList=element+","
+            tagList+=element+","
         });
         tagList.substring(0, tagList.length-1)
         uri+="?tags="+tagList
@@ -37,6 +37,7 @@ function fillPics() {
 function addTag(tag){
     selectedTags.push(tag)
     document.getElementById(tag).setAttribute("onclick", "removeTag('"+tag+"')")
+    document.getElementById(tag).classList.add("tag-button-pressed")
     fillPics();
 }
 
@@ -44,5 +45,6 @@ function removeTag(tag){
     index = selectedTags.indexOf(tag);
     selectedTags.splice(index, 1);
     document.getElementById(tag).setAttribute("onclick", "addTag('"+tag+"')")
+    document.getElementById(tag).classList.remove("tag-button-pressed")
     fillPics();
 }

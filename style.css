@@ -128,3 +128,11 @@ table{
     margin-left: auto;
     margin-right: auto;
 }
+
+button {
+    background-color: lightgrey;
+}
+
+.tag-button-pressed {
+    background-color: lightgreen;
+}
