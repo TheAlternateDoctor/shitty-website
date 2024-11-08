@@ -1,3 +1,16 @@
+body{
+    background-image: url("img/bg-site.png");
+    /* color:blueviolet; */
+    text-shadow: 5px 5px 5px #fdf6e3,
+                -5px 5px 5px #fdf6e3,
+                5px -5px 5px #fdf6e3,
+                -5px -5px 5px #fdf6e3,
+                0px 5px 5px #fdf6e3,
+                0px -5px 5px #fdf6e3,
+                5px 0px 5px #fdf6e3,
+                -5px 0px 5px #fdf6e3;
+}
+
 .about, h2, .center-text{
     text-align: center;
 }
