@@ -5,7 +5,7 @@ if(isset($_GET["tags"])){
     $tags = explode(",",$tags);
 }
 
-include_once("db.php");
+include_once("../includes/db.php");
 
 if(isset($tags)){
     $query = "SELECT DISTINCT img.id, img.location, img.width, img.height FROM img";

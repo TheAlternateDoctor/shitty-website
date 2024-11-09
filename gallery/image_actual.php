@@ -17,7 +17,7 @@
                 document.getElementById("top").innerHTML = data;
             });
 
-        fetch("/includes/footer.html")
+        fetch("/includes/footer.php")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("footer").innerHTML = data;

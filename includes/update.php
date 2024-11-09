@@ -1,6 +1,6 @@
 <?php
 
-include_once("db.php");
+include_once("../includes/db.php");
 
 $result = $mysqli->query("SELECT * FROM tags WHERE name LIKE '$tag'")->fetch_row();
 
