@@ -1,0 +1,41 @@
+<HTML>
+    <head>
+        <title>Doc's website</title>
+        <link href="/style.css" rel="stylesheet">
+        <script>
+            fetch("/includes/sidebar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("sidebar").innerHTML = data;
+            });
+    
+            fetch("/includes/top.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("top").innerHTML = data;
+            });
+        
+            fetch("/includes/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top" id="top"></div>
+        <table class="table">
+            <td class="sidebar">
+                <div id="sidebar"></div>
+            </td>
+            <td class="about main">
+                <img src="/img/thonking.gif">
+                <h1>Where are you going?</h1>
+                <p> Looks like you got lost.</p>
+                <a href="/index.html">Bring me back to the main page please!</a>
+            </td>
+            <div class="sticky-socials footer" id="footer"></div>
+    </table>
+    
+    </body>
+    </HTML>

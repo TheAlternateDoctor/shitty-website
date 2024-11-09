@@ -1,21 +1,21 @@
 <HTML>
 <head>
     <title>Doc's website</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
     <script>
-        fetch("includes/sidebar.html")
+        fetch("/includes/sidebar.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("sidebar").innerHTML = data;
         });
 
-        fetch("includes/top.html")
+        fetch("/includes/top.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("top").innerHTML = data;
         });
     
-        fetch("includes/footer.html")
+        fetch("/includes/footer.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("footer").innerHTML = data;
