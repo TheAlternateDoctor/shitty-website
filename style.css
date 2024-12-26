@@ -26,6 +26,7 @@ ul.main-list{
 
 table{
     width:100%;
+    height:84%
 }
 
 .sidebar{
@@ -57,6 +58,7 @@ table{
 
 .main {
     border-left: 3px solid cyan;
+    vertical-align: top;
 }
 
 .table{
@@ -162,4 +164,8 @@ button {
 #sidebar{
     position:sticky;
     top:0;
+}
+
+.img-subtitle{
+    font-size: 60%;
 }
