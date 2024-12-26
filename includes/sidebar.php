@@ -19,9 +19,9 @@ include_once("visitorCounter.php");
 
     <div class="sticky-socials footer" id="footer">
         <a href="https://www.youtube.com/c/TheAlternateDoctor" class="blinky-footer-single"><img src="/img/blinkies/youtube.gif" class="blinky-footer"></a>
+        <br/>
         <a href="https://x.com/AlternateDoctor"><img src="/img/blinkies/twitter.gif" class="blinky-footer"></a>
         <a href="https://bsky.app/profile/matt.thealtdoc.fr"><img src="/img/blinkies/bluesky.gif" class="blinky-footer"></a>
-        <br/>
         <img src="/img/blinkies/coffee.gif" class="blinky-footer">
         <img src="/img/blinkies/music.gif" class="blinky-footer">
         <img src="/img/blinkies/slow.gif" class="blinky-footer">

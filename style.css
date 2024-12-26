@@ -52,6 +52,10 @@ table{
     width:45%;
 }
 
+.blinky-footer-single{
+    margin-bottom: 1%;
+}
+
 .navbar, .top, .footer {
     text-align: center;
 }
