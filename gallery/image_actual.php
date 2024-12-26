@@ -5,7 +5,7 @@
     <title>Doc's website</title>
     <link href="/style.css" rel="stylesheet">
     <script>
-        fetch("/includes/sidebar.html")
+        fetch("/includes/sidebar.php")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("sidebar").innerHTML = data;
@@ -15,12 +15,6 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById("top").innerHTML = data;
-            });
-
-        fetch("/includes/footer.php")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
             });
     </script>
 </head>
@@ -75,7 +69,6 @@
                 </td>
             </table>
         </td>
-        <div class="sticky-socials footer" id="footer"></div>
     </table>
 
     <?php

@@ -31,7 +31,7 @@ table{
 .sidebar{
     width:15%;
     vertical-align: top;
-    padding:1%;
+    padding:0;
 }
 
 .img-index {
@@ -48,7 +48,7 @@ table{
 }
 
 .blinky-footer{
-    width:11%;
+    width:45%;
 }
 
 .navbar, .top, .footer {
@@ -62,6 +62,7 @@ table{
 .table{
     border-top: 3px solid cyan;
     padding-bottom:5%;
+    border-collapse: collapse;
 }
 
 .sticky-socials{
@@ -70,7 +71,7 @@ table{
     position:fixed;
     bottom:0;
     left:0;
-    width:100%;
+    width:15.25vw;
     z-index:100;
 }
 
@@ -152,4 +153,13 @@ button {
 
 .gallery-pic-solo {
     max-width: 100%;
+}
+
+.lore-index-img{
+    width:50%;
+}
+
+#sidebar{
+    position:sticky;
+    top:0;
 }
