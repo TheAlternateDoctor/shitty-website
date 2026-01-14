@@ -1,0 +1,117 @@
+.background-body {
+    background-image: url("../img/bg-site.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-block {
+    margin-top:2%;
+    margin-bottom:2%;
+    background-color:whitesmoke;
+}
+
+.title{
+    text-align: center;
+    font-size:40px;
+}
+
+.general-desc{
+    text-align: center;
+}
+
+.comms-open{
+    color:green;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.comms-closed{
+    color:red;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.divider-container{
+    display: flex;
+    align-items: center;
+}
+
+.divider{
+    width:20%!important;
+    margin: 0 40%!important;
+    margin-bottom: 1rem!important;
+}
+
+.divider-big{
+    width:50%!important;
+    margin: 0 25%!important;
+    margin-bottom: 1rem!important;
+}
+
+.btn-small{
+    width: 40% !important;
+    margin:0 30%;
+    margin-bottom: 1rem;
+}
+
+.btn-blue {
+  --bs-btn-color: #fff!important;
+  --bs-btn-bg: #0d6efd!important;
+  --bs-btn-border-color: #0d6efd!important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0b5ed7;
+  --bs-btn-hover-border-color: #0a58ca!important;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+}
+
+.btn-red {
+  --bs-btn-color: #fff!important;
+  --bs-btn-bg: #dc3545!important;
+  --bs-btn-border-color: #dc3545!important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb2d3b;
+  --bs-btn-hover-border-color: #b02a37!important;
+  --bs-btn-focus-shadow-rgb: 225, 83, 97;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #b02a37;
+  --bs-btn-active-border-color: #a52834;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #dc3545;
+  --bs-btn-disabled-border-color: #dc3545;
+}
+
+.title-cat{
+    font-size:40px;
+}
+
+.subtitle-cat{
+    font-size:25px;
+}
+
+.subtitle-2{
+    font-size:20px;
+}
+
+.push-top{
+    margin-top: 1rem!important;
+}
+
+.small-text{
+    font-size:10px
+}
+
+.in-modal{
+    padding:var(--bs-modal-padding);
+    max-width:calc(var(--bs-modal-width) - var(--bs-modal-padding) * 2);
+}

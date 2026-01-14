@@ -1,0 +1,141 @@
+<head>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="background-body">
+    <div class="container text-center border border-5 rounded-5 grid-block">
+        <div class="row border-bottom border-3">
+            <p class="title">Doc's commissions</p>
+        </div>
+        <div class="row border-bottom border-3">
+            <span class="general-desc">Welcome to my work in progress commission website!<br>
+                My commissions are currently</span>
+            <span class="comms-open">OPEN</span>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 border-end border-3">
+                <div class="row border-bottom border-2">
+                    <p class="subtitle-cat">Terms of service</p>
+                        <p>Provide references for your commissions!<br/>
+                        The more the better, so feel free to also send<br/>galleries or drive links if you made them.</p><hr class="divider"/>
+                        <p>Payment is done upon receiving a first sketch!<br>
+                        For now, I'll accept Paypal only,<br>but if you need something else we can look into it.</p><hr class="divider"/>
+                        <p>Credit me if you're using the commission for commercial purposes!</p><hr class="divider"/>
+                        <p>I reserve the right to refuse requests I am not comfortable drawing.</p>
+                </div>
+                <div class="row">
+                    <p class="subtitle-cat">Additional info</p>
+                        <p>Commissions may take more than a week!<br/>
+                            I don't really know, this is my first time doing something like this</p><hr class="divider"/>
+                        <p>Wanna do something outside of the normal set of headshot, fullbody, scene?<br/>
+                            Ask anyways, maybe we can find something!</p><hr class="divider"/>
+                        <p>I can also do Rhythm Heaven mods and remixes, if you ask nicely.</p>
+                </div>
+            </div>
+            <div class="col-sm-2 border-start border-3">
+                <div class="row border-2">
+                    <p class="subtitle-cat">Links</p>
+                        <a href="https://bsky.app/profile/thealtdoc.fr" target="_blank" class="btn btn-blue btn-small">Bluesky</a><hr class="divider"/>
+                        <a href="https://x.com/AlternateDoctor" target="_blank" class="btn btn-blue btn-small">Twitter</a><hr class="divider"/>
+                        <a href="https://www.youtube.com/@TheAlternateDoctor" target="_blank" class="btn btn-red btn-small">Youtube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center border border-5 rounded-5 grid-block">
+        <div class="row">
+            <p class="title-cat">Prices</p>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="subtitle-cat">Headshot<br/>
+                <span class="subtitle-2">5&euro;</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#headshotModal">
+                See examples
+                </button>
+            </div>
+            <div class="col">
+                <p class="subtitle-cat">Fullbody<br/>
+                <span class="subtitle-2">20&euro;</span></p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullbodyModal">
+                See examples
+                </button>
+            </div>
+            <div class="col">
+                <p class="subtitle-cat">Scene<br/>
+                <span class="subtitle-2">30&euro;</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sceneModal">
+                See examples
+                </button>
+            </div>
+        </div>
+        <div class="row border-bottom border-3 push-top">
+            <hr class="divider-big"/>
+            <p class="subtitle-cat">Add-ons</p>
+            <p>Additional characters are 75% of the price<br/>
+                Characters in the "can maybe perhaps" category gets a 25% discount</p>
+        </div>
+        <div class="row">
+            <div class="col border-end border-3">
+                <p class="title-cat">Do</p>
+                <p>Furries/Anthros<br>
+                </div>
+            <div class="col border-start border-end border-3">
+                <p class="title-cat">Can maybe perhaps</p>
+                <p>Humans<br>Feral<br>Complex designs and details</p>
+            </div>
+            <div class="col border-start border-3">
+                <p class="title-cat">Don't</p>
+                <p>Mecha<br>Gore</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal headshot -->
+    <div class="modal fade" id="headshotModal" tabindex="-1" aria-labelledby="headshotModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="headshotModalLabel">Gallery</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="in-modal" src="img/headshot1.png">
+                <img class="in-modal" src="img/headshot2.png">
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal fullbody -->
+    <div class="modal fade" id="fullbodyModal" tabindex="-1" aria-labelledby="fullbodyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="fullbodyModalLabel">Gallery</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="in-modal" src="img/fullbody1.png">
+                <img class="in-modal" src="img/fullbody2.jpg">
+                <img class="in-modal" src="img/fullbody3.jpg">
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal scene -->
+    <div class="modal fade" id="sceneModal" tabindex="-1" aria-labelledby="sceneModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="sceneModalLabel">Gallery</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="in-modal" src="img/scene.jpg">
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
