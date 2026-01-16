@@ -1,5 +1,4 @@
 body{
-    background-image: url("img/bg-site.png");
     /* color:blueviolet; */
     text-shadow: 5px 5px 5px #fdf6e3,
                 -5px 5px 5px #fdf6e3,
@@ -9,6 +8,13 @@ body{
                 0px -5px 5px #fdf6e3,
                 5px 0px 5px #fdf6e3,
                 -5px 0px 5px #fdf6e3;
+    margin:0;
+    background-image: url("img/bg-site.png");
+}
+
+.top {
+    /* background-image: url("img/bg-top.png"); */
+    background-color: #b5b5b5;
 }
 
 .about, h2, .center-text{
@@ -33,6 +39,8 @@ table{
     width:15%;
     vertical-align: top;
     padding:0;
+    background-image: url("img/bg-sidebar.png");
+    border-right: 3px solid gray;
 }
 
 .img-index {
@@ -61,24 +69,25 @@ table{
 }
 
 .main {
-    border-left: 3px solid cyan;
+    /* border-left: 3px solid grey; */
     vertical-align: top;
 }
 
 .table{
-    border-top: 3px solid cyan;
+    border-top: 3px solid grey;
     padding-bottom:5%;
     border-collapse: collapse;
 }
 
 .sticky-socials{
-    background-color: cyan;
+    background-color: grey;
     padding-top:0.5%;
     position:fixed;
     bottom:0;
     left:0;
-    width:15.25vw;
+    width:15vw;
     z-index:100;
+    border-right: 2px solid gray;
 }
 
 .title-footer{
