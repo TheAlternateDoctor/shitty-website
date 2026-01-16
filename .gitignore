@@ -1,3 +1,4 @@
 **/*.Identifier
 
 gallery/gallery-img/
+includes/db.php
