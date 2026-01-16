@@ -1,0 +1,51 @@
+<HTML>
+    <head>
+        <title>Doc's website</title>
+        <link href="/style.css" rel="stylesheet">
+        <script>
+            fetch("/includes/sidebar.php")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("sidebar").innerHTML = data;
+            });
+    
+            fetch("/includes/top.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("top").innerHTML = data;
+            });
+        
+        </script>
+    </head>
+    <body>
+        <div class="top" id="top"></div>
+        <table class="table">
+            <td class="sidebar">
+                <div id="sidebar"></div>
+            </td>
+            <td class="about main">
+                <a href="img/matt/ref.png" target="_blank"><img src="img/matt/ref.png" class="lore-index-img" alt="Ref sheet for Matt"></a>
+                <!-- <p class="img-subtitle">Image courtesy of <a href="https://bsky.app/profile/dreamerawaken.bsky.social">DreamerAwaken</a>!</p> -->
+                <p class="img-subtitle-gallery"><a target="_blank" href="https://drive.google.com/drive/folders/1HBSKOf3JyWAzcoQudn8cO_KQow4bK1Zd?usp=drive_link">Open gallery</a></p>
+                <h2>MATT</h2>
+                <p>One of our protagonists. It is a senior chemist, researcher in material recycling, and <a href="/lore/thierry.html">Thierry's</a> coworker.</p>
+                <p>Fairly laid back, pretty nonchalant, nothing seems to bother it. It's always ready for any shenanigans its flatmates might be planning.</p>
+                <p>It is very into astronomy, it knows the starry sky like the back of its hands<br/>and the best spots to plant its telescope,away from light pollution.</p>
+                <p>It's always fascinated by the latest trend in tech. Its visor is a prototype from a cyber implant company;<br/>
+                    It can track a fully 3D environment , and it can also superimpose valuable information in its research, such as different notes.<br/>
+                    It has also been shown to run Doom (1993) and other misc programs, but it was not exactly <i>official.</i><br/>
+                    <a href="/lore/diode.html">Diode</a> kind of bothered Matt enough to try to install homebrew on it, with varying degrees of success.<br/>
+                    The visor is extremely modular, thanks to it being a prototype. A few screws hold the LED panel in place, with the full circuit board underneath.
+                </p>
+                <img src="img/matt/visor.png" style="height:300px" alt="A sketch of Matt holding Ed; Doom is being played on its visor.">
+                <p class="img-subtitle">Image courtesy of Kit!</p>
+                <p>
+                    After Thierry's shenanigans with their own grimoire, it tried some magic itself;<br/>
+                    Although Thierry's grimoire didn't lead anywhere, a few archived pages of a divination grimoire it found online did lead to some good results!<br/>
+                    Whether it's the stars, coffee stains or Tarot cards, Matt can read the future with some amount of precision.
+                </p>
+                </td>
+            </table>
+    
+    </body>
+    </HTML>
