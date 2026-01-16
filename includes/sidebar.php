@@ -8,7 +8,7 @@ include_once("visitorCounter.php");
     <div class="navbar">
         <a href="/index.html">Main page</a><br>
         <a href="/projects.html">Projects</a><br>
-        <a href="/gallery/gallery.html">Gallery</a><br>
+        <!-- <a href="/gallery/gallery.html">Gallery</a><br> -->
         <h2><a href="/lore/index.html">Lore and OCs:</a></h2>
         <a href="/lore/matt.html">Matt</a><br>
         <a href="/lore/thierry.html">Thierry</a><br>
